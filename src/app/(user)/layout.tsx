@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import "../../styles/globals.css";
 import Navbar from "@/components/Navbar";
+import PageButton from "@/components/PageButton";
+import "slick-carousel/slick/slick.css";
+import Footer from '@/components/Footer';
+import Layout from '@/components/Layout'
 
 
 
@@ -18,8 +22,13 @@ export default function RootLayout({
     <html lang="en">
       
       <body className="font-display">
-        <Navbar />
-        {children}</body>
+        <Layout>
+            <Navbar />
+            <PageButton />
+            {children}
+             <Footer />
+        </Layout>
+        </body>
     </html>
   );
 }
